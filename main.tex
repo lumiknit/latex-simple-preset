@@ -1,0 +1,31 @@
+% lumiknit's flavored latex presettings
+% 20200526
+% lumiknit
+
+% === Main file ===
+
+% Document descriptions
+\title{ TITLE }
+\author{ AUTHOR }
+\date{} % Commenting out this if you want to get a date
+
+% Document style
+\documentclass{article}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage[nodisplayskipstretch]{setspace}
+\setstretch{1.15}
+
+% Load packages and settings
+\input{packages}
+\input{settings}
+
+% --- Document ---
+\begin{document}
+\maketitle
+\vspace{1pt}
+% --- Put all contents below, using \input{<FILE>} or \include{<FILE>}
+
+\lipsum[2]
+
+% --- Put all contents above, using \input{<FILE>} or \include{<FILE>}
+\end{document}
