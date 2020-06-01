@@ -34,13 +34,13 @@ endif
 
 build_and_open: *.tex
 	@echo "Typesetting..."
-	@if $(PDFLATEX) $(MAIN).tex $(PDFLATEXOPT) | grep '^!.*' -A300 --color=auto; then \
+	@if $(PDFLATEX) $(MAIN).tex $(PDFLATEXOPT) | grep -r '^!.*' -A300 --color=auto; then \
 		echo ""; \
 		echo "[ERROR] Some errors occurred during typesetting!"; \
 		exit 0; \
 	else \
 		echo "Typesetting Done!"; \
-		$(OPEN_PDF) \
+		$(OPEN_PDF); \
 	fi
 
 all: $(MAIN).pdf open
