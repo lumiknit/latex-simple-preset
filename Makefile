@@ -25,7 +25,7 @@ ifeq ($(ENV_OS),Windows)
 	RM := del
 	OPEN_PDF := $(MAIN).pdf
 else ifeq ($(ENV_OS),MacOS)
-	OPEN_PDF := open "$(MAIN).pdf"
+	OPEN_PDF := open "$(MAIN).pdf";
 else
 	OPEN_PDF := xdg-open "$(MAIN).pdf" > /dev/null 2>&1 &
 endif
@@ -34,13 +34,13 @@ endif
 
 build_and_open: *.tex
 	@echo "Typesetting..."
-	@if $(PDFLATEX) $(MAIN).tex $(PDFLATEXOPT) | grep -r '^!.*' -A300 --color=auto; then \
+	@if $(PDFLATEX) $(MAIN).tex $(PDFLATEXOPT) | grep '^!.*' -A300 --color=auto; then \
 		echo ""; \
 		echo "[ERROR] Some errors occurred during typesetting!"; \
 		exit 0; \
 	else \
 		echo "Typesetting Done!"; \
-		$(OPEN_PDF); \
+		$(OPEN_PDF) \
 	fi
 
 all: $(MAIN).pdf open
