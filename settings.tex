@@ -65,6 +65,7 @@
 \newcommand{\dom}{\textnormal{dom}} % Domain
 
 \newcommand{\Emb}{\textnormal{Emb}} % Embeddings
+\newcommand{\End}{\textnormal{End}} % Endomorphism
 \newcommand{\Ext}{\textnormal{Ext}} % Ext functor
 \newcommand{\ext}{\textnormal{ext}} % ext functor
 
@@ -76,6 +77,7 @@
 \newcommand{\bfFunc}{\textbf{Func}} % Functor category
 
 \newcommand{\Gal}{\textnormal{Gal}} % Galois groups
+\newcommand{\GL}{\textnormal{GL}} % Galois groups
 \newcommand{\Grp}{\textnormal{Grp}} % Group category
 \newcommand{\bfGrp}{\textbf{Grp}} % Group category
 \newcommand{\Groups}{\textnormal{Groups}} % Group category
@@ -87,6 +89,7 @@
 \newcommand{\Id}{\textnormal{Id}} % Identity
 \newcommand{\id}{\textnormal{id}} % Identity
 \newcommand{\im}{\textnormal{im}\,} % Image
+\renewcommand{\Im}{\operatorname{Im}} % Imaginary Part
 
 \newcommand{\Mod}{\textnormal{Mod}} % Module category
 \newcommand{\bfMod}{\textbf{Mod}} % Module category
@@ -105,6 +108,7 @@
 \newcommand{\Pos}{\textnormal{Pos}} % Poset category
 \newcommand{\bfPos}{\textbf{Pos}} % Poset category
 
+\renewcommand{\Re}{\operatorname{Re}} % Imaginary Part
 \newcommand{\Rep}{\textnormal{Rep}} % Representation category
 \newcommand{\rep}{\textnormal{rep}} % Representation category
 \newcommand{\Rings}{\textnormal{Rings}} % Group category
@@ -120,20 +124,21 @@
 \newcommand{\Tor}{\textnormal{Tor}} % Tor functor
 \newcommand{\tor}{\textnormal{tor}} % tor functor
 \newcommand{\Tot}{\textnormal{Tot}} % Total complex
+\newcommand{\Tr}{\textnormal{Tr}} % Tor functor
 
 
 % Matrix
 % Usage: \begin{Mat}{c c} 2 & 3 \\ 3 & 2 \end{Mat}
 %    or, \mMat{c c}{2 & 3 \\ 3 & 2}
 \newenvironment{matMat}[1]{\left(\begin{array}{#1}}{\end{array}\right)}
-\newcommand{\mMat}[2]{\begin{matMat}{#1} #2 \end{Mat}}
+\newcommand{\mMat}[2]{\begin{matMat}{#1} #2 \end{matMat}}
 \newenvironment{matSMat}[1]{\left[\begin{array}{#1}}{\end{array}\right]}
-\newcommand{\mSMat}[2]{\begin{matSMat}{#1} #2 \end{Mat}}
+\newcommand{\mSMat}[2]{\begin{matSMat}{#1} #2 \end{matSMat}}
 \newenvironment{matDet}[1]{\left|\begin{array}{#1}}{\end{array}\right|}
-\newcommand{\mDet}[2]{\begin{matDet}{#1} #2 \end{Mat}}
+\newcommand{\mDet}[2]{\begin{matDet}{#1} #2 \end{matDet}}
 \newenvironment{matVol}[1]
   {\left|\left|\begin{array}{#1}}{\end{array}\right|\right|}
-\newcommand{\mVol}[2]{\begin{matVol}{#1} #2 \end{Mat}}
+\newcommand{\mVol}[2]{\begin{matVol}{#1} #2 \end{matVol}}
 
 %----------------------------------------------------------
 % Abbrev for styles
